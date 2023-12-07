@@ -7,6 +7,9 @@
                     <strong class="primary-font">
                         {{ message.user.name }}
                     </strong>
+                    <i>
+                        {{ message.created_at }}
+                    </i>
                 </div>
                 <p>
                     {{ message.message }}

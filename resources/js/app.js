@@ -7,15 +7,6 @@
 import './bootstrap';
 import { createApp } from 'vue';
 
-
-/**
- * Next, we will create a fresh Vue application instance. You may then begin
- * registering components with the application instance so they are ready
- * to use in your application's views. An example is included for you.
- */
-
-// const app = createApp({});
-
 import ExampleComponent from './components/ExampleComponent.vue';
 import ChatMessages from './components/ChatMessages.vue';
 import ChatForm from './components/ChatForm.vue';
@@ -59,9 +50,6 @@ const app = createApp({
 app.component('example-component', ExampleComponent);
 app.component('chat-messages', ChatMessages)
 app.component('chat-form', ChatForm)
-
-
-
 
 app.mount('#app');
 

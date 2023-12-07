@@ -12,7 +12,7 @@ use Illuminate\Queue\SerializesModels;
 use App\Models\Message;
 use App\Models\User;
 
-class MessageSent
+class MessageSent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
