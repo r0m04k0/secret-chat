@@ -7,9 +7,9 @@
                     <strong class="primary-font">
                         {{ message.user.name }}
                     </strong>
-                    <i>
+                    <span class="badge badge-light">
                         {{ message.created_at }}
-                    </i>
+                    </span>
                 </div>
                 <p>
                     {{ message.message }}
@@ -21,6 +21,6 @@
 
 <script>
   export default {
-    props: ['messages']
+    props: ['messages'],
   };
 </script>
