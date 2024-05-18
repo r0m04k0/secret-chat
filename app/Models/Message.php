@@ -27,10 +27,17 @@ class Message extends Model
     {
         return $this->belongsTo(User::class);
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 9319adea673dc353275895de4d2178561032a1a5
     public function getCreatedAtAttribute($value)
     {
         return Carbon::parse($value)->toDateTimeString();
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9319adea673dc353275895de4d2178561032a1a5
 }

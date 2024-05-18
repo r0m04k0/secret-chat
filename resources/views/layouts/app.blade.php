@@ -39,6 +39,14 @@
         color: #777777;
     }
 
+<<<<<<< HEAD
+=======
+    .panel-body {
+        overflow-y: scroll;
+        height: 70vh;
+    }
+
+>>>>>>> 9319adea673dc353275895de4d2178561032a1a5
     ::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
         background-color: #F5F5F5;

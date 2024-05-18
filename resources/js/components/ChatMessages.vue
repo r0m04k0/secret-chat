@@ -7,7 +7,11 @@
                     <strong class="primary-font">
                         {{ message.user.name }}
                     </strong>
+<<<<<<< HEAD
                     <span class="badge badge-light text-muted">
+=======
+                    <span class="badge badge-light">
+>>>>>>> 9319adea673dc353275895de4d2178561032a1a5
                         {{ message.created_at }}
                     </span>
                 </div>
