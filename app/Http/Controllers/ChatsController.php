@@ -50,6 +50,12 @@ class ChatsController extends Controller
         return ['status' => 'Message Sent!'];
     }
 
+    public function clearChat()
+    {
+        Message::truncate();
+        return redirect('/');
+    }
+
 }
 
 

@@ -20,3 +20,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [ChatsController::class, 'index']);
 Route::get('messages', [ChatsController::class, 'fetchMessages']);
 Route::post('messages', [ChatsController::class, 'sendMessage']);
+
+Route::post('clear', [ChatsController::class, 'clearChat'])->name('clear');
+

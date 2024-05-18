@@ -7,11 +7,11 @@
                     <strong class="primary-font">
                         {{ message.user.name }}
                     </strong>
-                    <i>
+                    <span class="badge badge-light text-muted">
                         {{ message.created_at }}
-                    </i>
+                    </span>
                 </div>
-                <p>
+                <p style="white-space: pre-line;">
                     {{ message.message }}
                 </p>
             </div>
@@ -21,6 +21,7 @@
 
 <script>
   export default {
-    props: ['messages']
+    props: ['messages'],
   };
+
 </script>

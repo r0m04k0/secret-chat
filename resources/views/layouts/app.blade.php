@@ -20,6 +20,14 @@
         padding: 0;
     }
 
+    main {
+        padding-top: 60px;
+    }
+
+    #messages {
+        height: auto;
+        padding-bottom: 100px;
+    }
     .chat li {
         margin-bottom: 10px;
         padding-bottom: 5px;
@@ -29,11 +37,6 @@
     .chat li .chat-body p {
         margin: 0;
         color: #777777;
-    }
-
-    .panel-body {
-        overflow-y: scroll;
-        height: 350px;
     }
 
     ::-webkit-scrollbar-track {
@@ -58,7 +61,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -96,7 +99,16 @@
                                         {{ __('Logout') }}
                                     </a>
 
+                                    <a class="dropdown-item" href="{{ route('clear') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('clear-form').submit();">
+                                        {{ __('Clear Chat') }}
+                                    </a>
+
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                    <form id="clear-form" action="{{ route('clear') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
@@ -107,7 +119,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
     </div>
